@@ -46,7 +46,7 @@ class DecisionTree():
         best_gain=-1
         split_idx,split_threshold=None,None
         
-        for feat_idx, in feat_idxs:
+        for feat_idx in feat_idxs:
             x_column=x[:,feat_idx]
             thresholds=np.unique(x_column)
             for thr in thresholds:

@@ -65,7 +65,7 @@ class DecisionTree():
             return 0
         n=len(y)
         n_l,n_r=len(left_idxs),len(right_idxs)
-        e_l,e_r=self._entropy(y[left_idxs],self._entropy(y[right_idxs]))
+        e_l,e_r=self._entropy(y[left_idxs]),self._entropy(y[right_idxs])
         child_entropy=(n_l/n)*e_l+(n_r/n)*e_r
         information_gain=parent_entropy-child_entropy
         return information_gain

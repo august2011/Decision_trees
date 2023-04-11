@@ -51,7 +51,7 @@ class DecisionTree():
             thresholds=np.unique(x_column)
             for thr in thresholds:
                 gain=self._information_gain(y,x_column,thr)
-                if gain>thresholds:
+                if gain>best_gain:
                     best_gain=gain
                     split_idx=feat_idx
                     split_threshold=thr
